@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primer Script: Suma de Números</title>
+    <title>Simulador de Impacto Inflacionario</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 40px; text-align: center; }
         .container { background: #1e293b; max-width: 650px; margin: auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); text-align: left; }
@@ -18,12 +18,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Mi primer Script: Suma de Números</h1>
-        <p>En esta clase aprendimos a pedir datos al usuario usando <code>input()</code> y procesarlos como variables numéricas.</p>
-<pre><code><span class="comment"># Código de la suma</span>
-n1 = <span class="func">float</span>(<span class="func">input</span>("Primer número: "))
-n2 = <span class="func">float</span>(<span class="func">input</span>("Segundo número: "))
-<span class="func">print</span>(f"Resultado: {n1 + n2}")</code></pre>
+        <h1>Simulador de Impacto Inflacionario</h1>
+        <p>Calculadora económica para medir cómo pierde valor el dinero en base a una tasa estimada.</p>
+<pre><code><span class="comment"># Simulación económica</span>
+precio_inicial = <span class="func">float</span>(<span class="func">input</span>("Precio actual del producto ($): "))
+inflacion = <span class="func">float</span>(<span class="func">input</span>("Porcentaje de inflación mensual (%): "))
+
+precio_final = precio_inicial * (1 + (inflacion / 100))
+<span class="func">print</span>(f"El mes que viene costará: ${precio_final:.2f}")</code></pre>
         <div class="footer">Actualizado automáticamente desde Google Colab</div>
     </div>
 </body>
