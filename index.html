@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicación Web: Suma de Números Interactiva</title>
+    <title>Simulador Macroeconómico de Inflación</title>
     
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
@@ -21,18 +21,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Aplicación Web: Suma de Números Interactiva</h1>
-        <p>Esta aplicación ejecuta código de Python nativo en tu propio navegador. Introduce los valores directamente en la consola inferior:</p>
+        <h1>Simulador Macroeconómico de Inflación</h1>
+        <p>Calculadora económica interactiva para estimar la depreciación del valor monetario en bienes de consumo:</p>
 
 <script type="py" worker>
-print("--- CALCULADORA DE SUMAS ACTIVA ---")
+print("--- SIMULADOR DE PRECIOS FUTUROS ---")
 
-# Código Python puro que interactúa con el usuario
-n1 = float(input("Introduce el primer número: "))
-n2 = float(input("Introduce el segundo número: "))
+precio_inicial = float(input("Precio actual del producto en góndola ($): "))
+inflacion = float(input("Porcentaje de proyección inflacionaria (%) : "))
 
-print(f"\nResultado exitoso -> La suma entre ambos es: {n1 + n2}")
-print("-----------------------------------")
+precio_final = precio_inicial * (1 + (inflacion / 100))
+
+print(f"\nAnálisis de proyección: El próximo mes costará ${precio_final:.2f}")
+print("--- FIN DEL ANÁLISIS ---")
 </script>
         
         <py-terminal></py-terminal>
