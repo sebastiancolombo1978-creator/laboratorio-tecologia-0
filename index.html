@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Impacto Inflacionario</title>
+    <title>Aplicación Web: Suma de Números Interactiva</title>
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 40px; text-align: center; }
         .container { background: #1e293b; max-width: 650px; margin: auto; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.3); text-align: left; }
         h1 { color: #38bdf8; font-size: 24px; text-align: center; margin-top: 0; border-bottom: 2px solid #334155; padding-bottom: 15px; }
         p { color: #94a3b8; line-height: 1.5; }
-        pre { background: #011627; padding: 15px; border-radius: 8px; border: 1px solid #334155; overflow-x: auto; }
-        code { font-family: "Fira Code", Monaco, Consolas, monospace; color: #ecc48d; font-size: 14px; line-height: 1.6; }
-        .comment { color: #637777; font-style: italic; }
-        .func { color: #82aaff; }
         .footer { margin-top: 20px; text-align: center; font-size: 12px; color: #64748b; }
+        
+        /* NUEVO: Estilo personalizado para la terminal de comandos */
+        py-terminal { display: block; background: #011627; border: 1px solid #334155; border-radius: 8px; padding: 10px; margin-top: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Simulador de Impacto Inflacionario</h1>
-        <p>Calculadora económica para medir cómo pierde valor el dinero en base a una tasa estimada.</p>
-<pre><code><span class="comment"># Simulación económica</span>
-precio_inicial = <span class="func">float</span>(<span class="func">input</span>("Precio actual del producto ($): "))
-inflacion = <span class="func">float</span>(<span class="func">input</span>("Porcentaje de inflación mensual (%): "))
+        <h1>Aplicación Web: Suma de Números Interactiva</h1>
+        <p>Esta aplicación ejecuta código de Python nativo en tu propio navegador. Introduce los valores directamente en la consola inferior:</p>
 
-precio_final = precio_inicial * (1 + (inflacion / 100))
-<span class="func">print</span>(f"El mes que viene costará: ${precio_final:.2f}")</code></pre>
-        <div class="footer">Actualizado automáticamente desde Google Colab</div>
+<script type="py" worker>
+print("--- CALCULADORA DE SUMAS ACTIVA ---")
+
+# Código Python puro que interactúa con el usuario
+n1 = float(input("Introduce el primer número: "))
+n2 = float(input("Introduce el segundo número: "))
+
+print(f"\nResultado exitoso -> La suma entre ambos es: {n1 + n2}")
+print("-----------------------------------")
+</script>
+        
+        <py-terminal></py-terminal>
+        
+        <div class="footer">Actualizado automáticamente desde Google Colab - Modo Interactivo</div>
     </div>
 </body>
 </html>
